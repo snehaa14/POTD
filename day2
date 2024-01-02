@@ -1,0 +1,35 @@
+question1
+
+
+class Solution {
+public:
+    int numIdenticalPairs(vector<int>& nums) 
+    {
+        int count=0;
+        for(int i=0;i<nums.size();i++)
+        {
+            for(int j=i+1;j<nums.size();j++)
+            {
+                if(nums[i]==nums[j])count++;
+            }
+        }
+        return count;
+        
+    }
+};
+
+
+
+question 2
+
+class Solution{
+    public:
+    //Function to return the count of number of elements in union of two arrays.
+    int doUnion(int a[], int n, int b[], int m)  
+    {
+        unordered_set <int>s;
+        for(int i=0;i<n;i++)s.insert(a[i]);
+         for(int i=0;i<m;i++)s.insert(b[i]);
+         return s.size();
+    }
+};
