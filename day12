@@ -1,0 +1,48 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int num,val;
+        cin>>num;
+
+        vector<int>vec;
+        for(int i=0;i<num;i++)
+        {
+            cin>>val;
+            vec.push_back(val);
+        }
+
+        int c;
+        string s;
+        for(int i=0;i<num;i++)
+        {
+            cin>>c;
+            cin>>s;
+            for(int j=0;j<c;j++)
+            {
+                if(s[j]=='U')
+                {
+                    if(vec[i]==0)vec[i]=9;
+                     else vec[i]--;
+                }
+                else{
+                    if(vec[i]==9)vec[i]=0;
+                    else vec[i]++;
+                }
+               
+            }
+            
+        }
+
+        for(int i=0;i<num;i++)
+        {
+            cout<<vec[i]<<" ";
+        }
+        cout<<endl;
+    }
+}
